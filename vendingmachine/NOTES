@@ -1,0 +1,39 @@
+To complete this project, you'll need to create several classes to handle the different components of the vending machine, such as the inventory, purchase process, and logging. Here's a high-level overview of the classes you might need:
+
+1. **VendingMachine**: This class will serve as the main entry point for the application. It will handle the main menu and user input, as well as instantiating and interacting with other classes.
+
+2. **Inventory**: This class will manage the vending machine's inventory. It should be able to read the inventory data from a file, track the remaining quantities of each product, and update the quantities after a purchase.
+
+3. **Product**: This class will represent an individual product in the vending machine. It should store information such as the product name, price, and type (e.g., chip, candy, drink, gum).
+
+4. **PurchaseProcess**: This class will handle the purchase process, including accepting money, selecting a product, dispensing the product, and handling change.
+
+5. **Logger**: This class will be responsible for logging transactions to the `Log.txt` file.
+
+6. **SalesReport**: This class will generate the sales report and write it to a file with a unique name based on the date and time.
+
+Here's a high-level overview of how these classes might interact:
+
+1. The `VendingMachine` class will create instances of the `Inventory`, `PurchaseProcess`, `Logger`, and `SalesReport` classes.
+
+2. When the application starts, the `VendingMachine` class will read the inventory data from the file and pass it to the `Inventory` class to initialize the available products.
+
+3. The `VendingMachine` class will display the main menu and handle user input.
+
+4. For the "Display Vending Machine Items" option, the `VendingMachine` class will retrieve the available products and their quantities from the `Inventory` class and display them.
+
+5. For the "Purchase" option, the `VendingMachine` class will create an instance of the `PurchaseProcess` class and guide the user through the purchase process.
+
+6. The `PurchaseProcess` class will interact with the `Inventory` class to check product availability and update quantities after a purchase.
+
+7. The `PurchaseProcess` class will also interact with the `Logger` class to log transactions.
+
+8. For the "Sales Report" option, the `VendingMachine` class will create an instance of the `SalesReport` class, which will interact with the `Inventory` class to retrieve sales data and generate the report.
+
+9. The `SalesReport` class will write the report to a file with a unique name based on the date and time.
+
+You'll also need to create unit tests for each class to ensure that the code works correctly. This might involve creating test cases for different scenarios, such as purchasing a product with sufficient funds, attempting to purchase a sold-out product, or generating a sales report with various sales data.
+
+To get started, you can create the initial class structure and focus on implementing the core functionality first, such as reading the inventory data, displaying the main menu, and handling user input. Then, you can gradually add the purchase process, logging, and sales report functionality.
+
+Remember to follow best practices for object-oriented programming, such as encapsulation, inheritance (if applicable), and separation of concerns. Additionally, ensure that your code is well-documented and easy to understand, as this will make it easier to maintain and extend in the future.
